@@ -1,5 +1,11 @@
 # Return Address Spoofing (x64)
 
+Built by **RingShift Researchers** — project by **Pworld** (Discord: `mmcopy`).
+
+[![Discord](https://img.shields.io/badge/Discord-RingShift%20Researchers-5865F2?logo=discord)](https://discord.gg/7sxw7DnShj)
+
+Inspired by [The Stack Series: Return Address Spoofing on x64](https://sabotagesec.com/the-stack-series-return-address-spoofing-on-x64/) by SabotageSec.
+
 Have you ever thought about your aimbot calling its function — and the anti-cheat being able to see exactly which address that call came from? Yeah — every function starts from an address, and that address gets recorded on the stack.
 
 Think of it like this: whenever your code calls any function, the CPU pushes the "way back" address onto the stack — the place execution should return to. And that's exactly what the anti-cheat reads. When it notices something interesting happening, it performs a stack walk: it asks the stack "who called this?" — and the answer is the caller's address.
